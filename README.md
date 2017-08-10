@@ -1,5 +1,6 @@
-Prerequisite: Adding repositories and dependencies to build.gradle
+### Prerequisite: Adding repositories and dependencies to build.gradle
 
+```
 repositories {
     maven { url "https://dl.bintray.com/buzzvil/buzzscreen/" }
     maven { url "http://dl.appnext.com/" }
@@ -9,10 +10,12 @@ dependencies {
     compile("com.buzzvil.buzzad:buzzad-sdk:")
     compile('com.android.support:multidex:1.0.1')
 }
+```
 
-Step 1: Adding Buzzad adView
+#### Step 1: Adding Buzzad adView
+
 In your layout file (for example: /res/layout/activity_main.xml), add Buzzad adView.
-
+```
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
  ...
@@ -25,10 +28,11 @@ In your layout file (for example: /res/layout/activity_main.xml), add Buzzad adV
     </com.buzzvil.buzzad.sdk.banner.AdView>
    ...
 </RelativeLayout>
+```
 
+#### Step 2: Loading an Ad
 
-Step 2: Loading an Ad
-
+```
 private AdView adView;
 
 @Override
@@ -56,5 +60,16 @@ public void onCreate(Bundle savedInstanceState) {
     // Request an ad
     adView.loadAd(121658059380746);
 }
+```
+#### Optional: Setting Demo
 
-Optional: Setting Demo
+If you set the audience's demographic profile, it may have positive impact on the fill rate and ad revenue.
+```
+String birthDay = new java.text.SimpleDateFormat("yyyy-MM-dd", Locale.US).format(cal.getTime());
+String gender = UserProfile.USER_GENDER_FEMALE;
+UserProfile profile = new UserProfile.Builder()
+						.setBirthday(birthDay)
+						.setGender(gender)
+						.build();
+BuzzSDK.setUserProfile(profile);
+```

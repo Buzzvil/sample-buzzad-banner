@@ -12,7 +12,7 @@ dependencies {
 }
 ```
 
-#### Step 1: Adding Buzzad adView
+### Step 1: Adding Buzzad adView
 
 In your layout file (for example: /res/layout/activity_main.xml), add Buzzad adView.
 ```
@@ -30,7 +30,7 @@ In your layout file (for example: /res/layout/activity_main.xml), add Buzzad adV
 </RelativeLayout>
 ```
 
-#### Step 2: Loading an Ad
+### Step 2: Loading an Ad
 
 ```
 private AdView adView;
@@ -61,15 +61,14 @@ public void onCreate(Bundle savedInstanceState) {
     adView.loadAd(121658059380746);
 }
 ```
-#### Optional: Setting Demo
+### Optional: Setting Demo
 
 If you set the audience's demographic profile, it may have positive impact on the fill rate and ad revenue.
 ```
 String birthDay = new java.text.SimpleDateFormat("yyyy-MM-dd", Locale.US).format(cal.getTime());
 String gender = UserProfile.USER_GENDER_FEMALE;
-UserProfile profile = new UserProfile.Builder()
-						.setBirthday(birthDay)
-						.setGender(gender)
-						.build();
+UserProfile profile = new UserProfile.Builder().setBirthday(birthDay)
+					       .setGender(gender)
+					       .build();
 BuzzSDK.setUserProfile(profile);
 ```

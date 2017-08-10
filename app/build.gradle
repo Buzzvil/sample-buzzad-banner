@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+
+repositories {
+    jcenter()
+}
+
+android {
+    compileSdkVersion compileSdkVersionValue
+    buildToolsVersion buildToolVersionValue
+
+    defaultConfig {
+        applicationId "com.buzzvil.banner.sample"
+        minSdkVersion 21
+        targetSdkVersion buildTargetSdkVersionValue
+        versionCode 1
+        versionName "1.1"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    buildToolsVersion '25.0.2'
+}
+
+dependencies {
+    compile("com.buzzvil.buzzscreen:buzzad-sdk:1.+")
+    compile('com.android.support:multidex:1.0.1')
+}

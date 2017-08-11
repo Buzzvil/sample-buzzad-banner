@@ -7,7 +7,7 @@ repositories {
 }
 ...
 dependencies {
-    compile("com.buzzvil.buzzad:buzzad-sdk:")
+    compile("com.buzzvil.buzzad:buzzad-sdk:1.+")
     compile('com.android.support:multidex:1.0.1')
 }
 ```

@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.buzzvil.buzzad.sdk.BuzzAdError;
-import com.buzzvil.buzzad.sdk.BuzzOptions;
 import com.buzzvil.buzzad.sdk.BuzzSDK;
 import com.buzzvil.buzzad.sdk.UserProfile;
 import com.buzzvil.buzzad.sdk.banner.Ad;
@@ -14,7 +13,6 @@ import com.buzzvil.buzzad.sdk.banner.AdListener;
 import com.buzzvil.buzzad.sdk.banner.AdView;
 
 public class SampleActivity extends Activity {
-
 	private AdView adView;
 	private View buttonStart, buttonStop;
 

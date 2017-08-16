@@ -31,6 +31,11 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
     }
     lintOptions {
         abortOnError false
@@ -39,6 +44,6 @@ android {
 }
 
 dependencies {
-    compile("com.buzzvil.buzzscreen:buzzad-sdk:1.+")
+    compile("com.buzzvil.buzzad:buzzad-sdk:+")
     compile('com.android.support:multidex:1.0.1')
 }

@@ -42,7 +42,7 @@ public class SampleActivity extends Activity {
 
 			adView = (AdView) findViewById(R.id.adView);
 			adView.setAdListener(adListener);
-			adView.loadAd("121658059380746");
+			adView.loadAd("[YOUR_APP_KEY]");
 		}
 	};
 
